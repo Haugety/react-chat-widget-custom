@@ -55,7 +55,7 @@ function Widget({
 
   const toggleConversation = () => {
     dispatch(toggleChat());
-  }
+  } 
 
   const handleMessageSubmit = (event) => {
     event.preventDefault();
@@ -66,7 +66,7 @@ function Widget({
     }
 
     handleSubmit?.(userInput);
-    dispatch(addUserMessage(userInput));
+    // dispatch(addUserMessage(userInput));
     handleNewUserMessage(userInput);
     event.target.message.value = '';
   }

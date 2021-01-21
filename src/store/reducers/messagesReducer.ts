@@ -43,7 +43,7 @@ const messagesReducer = {
       ...state,
       messages: id ?
         state.messages.filter(message => message.customId !== id) :
-        state.messages.splice(state.messages.length - 1, count)
+        state.messages.splice(state.messages.length, count)
     }),
 
   [SET_BADGE_COUNT]: (state: MessagesState, { count }) => ({ ...state, badgeCount: count }),
